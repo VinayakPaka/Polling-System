@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Polling System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="container">
+        <header>
+            <h1>Polling System</h1>
+        </header>
+
+        <section id="poll-section">
+            <h2>Create a Poll</h2>
+            <div class="poll-form">
+                <input type="text" id="poll-question" placeholder="Enter poll question">
+                <div id="options-container">
+                    <input type="text" class="poll-option" placeholder="Enter option 1">
+                    <input type="text" class="poll-option" placeholder="Enter option 2">
+                </div>
+                <button id="add-option">+ Add Option</button>
+                <button id="create-poll">Create Poll</button>
+            </div>
+        </section>
+
+        <section id="vote-section" style="display: none;">
+            <h2>Vote Now</h2>
+            <div id="poll-display"></div>
+            <button id="finish-poll" style="display: none;">Finish Poll</button>
+        </section>
+
+        <section id="results-section">
+            <h2>Poll Results</h2>
+            <canvas id="resultsChart"></canvas>
+        </section>
+
+        <section id="poll-history">
+            <h2>Poll History</h2>
+            <button id="clear-history">Clear History</button>
+            <div id="history-container"></div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
